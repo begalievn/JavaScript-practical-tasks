@@ -53,6 +53,14 @@ code {
   font-size: 20px;
 }
 
+/* <> Exercise */
+.exercise {
+  border-top: solid 1px rgb(197, 197, 197);
+  padding: 20px 0;
+  margin: 15px 0;
+}
+/* </> Exercise */
+
 /* <> Answer code */
 .answer-code {
   border-left: solid 5px green;
@@ -67,8 +75,15 @@ code {
   margin-bottom: 15px;
 }
 
+.answer__div {
+  background-color: black;
+  color: green;
+  padding: 5px 3px;
+}
+
 button {
   margin-top: 15px;
   font-size: 20px;
 }
+
 /* </> Answer code */
