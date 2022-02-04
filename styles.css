@@ -87,3 +87,14 @@ button {
 }
 
 /* </> Answer code */
+
+/* <> Task 4 */
+
+.ex1-divs div {
+  visibility: hidden;
+}
+
+.ex2-divs div {
+  font-size: 20px;
+}
+/* </> Task 4 */

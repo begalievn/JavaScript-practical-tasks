@@ -184,3 +184,17 @@ ex7Button.addEventListener("click", () => {
     }
   }
 });
+
+/* Task 4 */
+
+// Exercise: 1
+
+const buttonEx1 = document.getElementById("task4-ex1-button");
+buttonEx1.addEventListener("click", () => {
+  const elements = document
+    .getElementsByClassName("ex1-divs")[0]
+    .querySelectorAll("div");
+  for (let i = 0; i < elements.length; i++) {
+    console.log(elements[i].textContent);
+  }
+});
