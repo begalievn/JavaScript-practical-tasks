@@ -198,3 +198,99 @@ buttonEx1.addEventListener("click", () => {
     console.log(elements[i].textContent);
   }
 });
+
+// Exercise: 2
+
+const buttonEx2 = document.getElementById("task4-ex2-button");
+buttonEx2.addEventListener("click", () => {
+  const elements = document.getElementsByClassName("element");
+  for (let i = 0; i < elements.length; i++) {
+    if (i < 3) {
+      elements[i].style.color = "red";
+    } else {
+      elements[i].style.color = "green";
+    }
+    console.log(elements[i]);
+  }
+});
+
+// Exercise: 3
+
+const buttonEx3 = document.getElementById("task4-ex3-button");
+const tasks = [
+  "Buy lemonade",
+  "Make toasts",
+  "Repair car",
+  "Play games",
+  "Pet a cat",
+];
+buttonEx3.addEventListener("click", () => {
+  olElement = document.getElementById("todo-list");
+  for (let i = 0; i < tasks.length; i++) {
+    const liTag = document.createElement("li");
+    let text = document.createTextNode(tasks[i]);
+    liTag.appendChild(text);
+    olElement.appendChild(liTag);
+  }
+  const answerDiv = document.getElementsByClassName("asnwer__div-task4-ex3")[0];
+  console.log(answerDiv.innerHTML);
+});
+
+// Exercise: 4
+
+const buttonEx4 = document.getElementById("task4-ex4-button");
+buttonEx4.addEventListener("click", () => {
+  console.log("button is clicked");
+  const parags = document
+    .querySelector(".ex4-article")
+    .querySelector("article")
+    .querySelectorAll("p");
+  for (let i = 0; i < parags.length; i++) {
+    const hrTag = document.createElement("hr");
+    parags[i].parentNode.insertBefore(hrTag, parags[i].nextSibling);
+  }
+});
+
+// Exercise: 5
+
+const buttonEx5 = document.getElementById("task4-ex5-button");
+buttonEx5.addEventListener("click", () => {
+  console.log("button is clicked");
+  const cartItems = document
+    .getElementById("cart-items")
+    .getElementsByClassName("item");
+  for (let i = 0; i < cartItems.length; i++) {
+    if (cartItems[i].textContent.includes("Cola 1.5 l")) {
+      cartItems[i].remove();
+    }
+    if (cartItems[i].textContent.includes("Chocolate bar")) {
+      const newItem = document.createElement("div");
+      newItem.innerHTML = `Canned Fish <span class="qty"> x4</span>`;
+      newItem.classList.add("item");
+      const parentNode = cartItems[i].parentNode;
+      parentNode.replaceChild(newItem, cartItems[i]);
+      console.log(newItem);
+    }
+  }
+});
+
+// Exercise: 6
+
+const buttonEx6 = document.getElementById("task4-ex6-button");
+buttonEx6.addEventListener("click", () => {
+  const ulElement = document
+    .getElementsByClassName("ex6-ul-container")[0]
+    .getElementsByTagName("ul")[0];
+
+  const inputItem = prompt("Write a task: ");
+  if (inputItem === "") {
+    console.log("input is empty");
+  } else if (inputItem === null) {
+    console.log("input is null");
+  } else {
+    const liElement = document.createElement("li");
+    const taskText = document.createTextNode(inputItem);
+    liElement.appendChild(taskText);
+    ulElement.appendChild(liElement);
+  }
+});

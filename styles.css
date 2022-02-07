@@ -97,4 +97,12 @@ button {
 .ex2-divs div {
   font-size: 20px;
 }
+
+#cart-items .item {
+  font-size: 20px;
+}
+
+.ex6-ul-container {
+  font-size: 19.5px;
+}
 /* </> Task 4 */
